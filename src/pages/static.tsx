@@ -8,7 +8,7 @@ const StaticPage = ({ data }: any) => {
     <div>
       <div className="relative">
         <div className="grid grid-cols-1 gap-2 lg:grid-cols-4 md:grid-cols-2">
-          {data?.map(
+          {data?.result?.map(
             (item: { _id: string; name: string; designation: string }) => (
               <Card key={item._id} {...item} />
             )
@@ -24,7 +24,7 @@ export default StaticPage;
 // This function gets called only once during build time
 export async function getStaticProps() {
   // Fetch data from external API
-  // const data = await getContacts();
+  const data = await getContacts();
   // Pass data to the page via props
-  return { props: { contacts } };
+  return { props: { data } };
 }
