@@ -6,7 +6,7 @@ const nextConfig = {
     domains: ["www.w3schools.com", "www.svgrepo.com"],
   },
  env: {
-  domainUrl: process.env.DEV_URL,
+  domainUrl: process.env.PROD_URL,
   mongodbUri: process.env.MONGODB_URI
 }
 };
