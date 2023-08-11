@@ -11,13 +11,19 @@ const Navbar = () => {
           href="/"
           className={`mr-2 ${pathname === "/" ? "text-blue-600" : ""}`}
         >
-          Server Side Rendering
+          Server Side Rendering (SSR)
         </Link>
         <Link
           href="/static"
-          className={`${pathname === "/static" ? "text-blue-600" : ""}`}
+          className={`mr-2 ${pathname === "/static" ? "text-blue-600" : ""}`}
         >
-          Static Site Generation
+          Static Site Generation (SSG)
+        </Link>
+        <Link
+          href="/incremental"
+          className={`${pathname === "/incremental" ? "text-blue-600" : ""}`}
+        >
+          Incremental Static Re-Generation (ISR)
         </Link>
       </div>
     </nav>
